@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Youtube</title>
+    <style>
+        /* ... (Your existing styles) ... */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0; /* Remove default body margin */
+        }
+
+        .header {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            border-radius: 25px 25px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .search-input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            flex-grow: 1;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .material-icons {
+
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
+        }
+       
+        .material-icons:hover{     
+       transform: scale(1.2); 
+  }
+        
+
+        /* Spacing */
+        .spacer {
+            flex-basis: 100%;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        /* ... (Your existing styles) ... */
+
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000; /* Add z-index to make sure it appears above other content */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5rem;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #FF0000; /* Change color on hover as an example */
+        }
+
+        .navbar-icons i {
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 1rem;
+           
+}
+
+        
+
+        /* Add more styles as needed */
+
+        /* Add padding to the content to prevent overlap with fixed navbar */
+        main {
+            padding-bottom: 60px; /* Adjust as needed based on navbar height */
+        }
+        /* ... (Your existing styles) ... */
+
+/* Article section styles */
+.article {
+    max-width: 1100px;
+    margin: auto;
+    padding: 19px;
+}
+
+/* Update video-container styles */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Update video styles */
+.video {
+    flex-basis: calc(50% - 10px); /* Set to half of the container width with some spacing */
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Updated video styles for larger screens, grouping every two videos */
+@media screen and (min-width: 768px) {
+    .video {
+        flex-basis: calc(50% - 10px); /* Set to half of the container width with more spacing */
+    }
+}
+
+
+.video img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.video-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #666;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.scale{
+    transition: transform 0.3s ease; /* Add a transition effect */
+  }
+  
+  /* Add a hover effect to scale up the image */
+  .scale:hover {
+    transform: scale(1.1); /* Scale up the image */
+  }
+  .title{
+    position: relative;
+    right: 150px;
+  }
+  .time{
+    position: relative;
+    right: 150px;
+  }
+
+/* ... (Your existing styles) ... */
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="logo.png" alt="YouTube logo" class="logo">
+            <input type="text" placeholder="Search" class="search-input">
+            <div class="icons">
+                <i class="material-icons microphone">mic</i>
+                <i class="material-icons notification">notifications</i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="article">
+            <div class="video-container">
+                <!-- Video 1 -->
+                <div class="video">
+                   <img class="scale" src="Screenshot 2024-01-28 065555.png" alt="">
+                    <div class="video-details">
+                        <div class="profile-pic" >
+                          <img src="Screenshot 2024-01-27 082408.png" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="title">Islamic video</div>
+                            <div class="time">Published 1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video">
+                   <img class="scale" src="Screenshot 2024-01-28 065555.png" alt="">
+                    <div class="video-details">
+                        <div class="profile-pic" >
+                          <img src="Screenshot 2024-01-27 082408.png" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="title">Islamic video</div>
+                            <div class="time">Published 1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Video 3 -->
+                 <div class="video">
+                    <img class="scale" src="Screenshot 2024-01-28 065637.png" alt="">
+                    <div class="video-details">
+                        <div  class="profile-pic" >
+                          <img src="Screenshot 2024-01-27 082408.png" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="title">Montage Video</div>
+                            <div class="time">Published 1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 4 -->
+                <div class="video">
+                    <img class="scale" src="Screenshot 2024-01-28 065637.png" alt="">
+                    <div class="video-details">
+                        <div class="profile-pic" >
+                          <img src="Screenshot 2024-01-27 082408.png" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="title">Montage Video</div>
+                            <div class="time">Published 1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+          <!-- Video 5 -->
+        
+        <div class="video">
+          <img class="scale" src="Screenshot 2024-01-28 065701.png" alt="">
+          <div class="video-details">
+              <div class="profile-pic">
+                  <img src="Screenshot 2024-01-27 082408.png" alt="">
+              </div>
+              <div class="details">
+                  <div class="title">Green Screen</div>
+                  <div class="time">Published 1 day ago</div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Video 6 -->
+        <div class="video">
+            <img class="scale" src="Screenshot 2024-01-28 065701.png" alt="">
+          <div class="video-details">
+              <div class="profile-pic" >
+                  <img   src="Screenshot 2024-01-27 082408.png" alt="">
+              </div>
+              <div class="details">
+                  <div class="title">Green Screen</div>
+                  <div class="time">Published 1 day ago</div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Video 7 -->
+        <div class="video">
+         <img class="scale" src="Screenshot 2024-01-28 070409.png" alt="">
+          <div class="video-details">
+              <div class="profile-pic">
+                  <img src="Screenshot 2024-01-27 082408.png" alt="">
+              </div>
+              <div class="details">
+                  <div class="title">AI</div>
+                  <div class="time">Published 1 day ago</div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Video 8 -->
+        <div class="video">
+            <img class="scale" src="Screenshot 2024-01-28 070409.png" alt="">
+          <div class="video-details">
+              <div class="profile-pic">
+                  <img src="Screenshot 2024-01-27 082408.png" alt="">
+              </div>
+              <div class="details">
+                  <div class="title">AI</div>
+                  <div class="time">Published 1 day ago</div>
+              </div>
+          </div>
+        </div>
+        
+        </div> <!-- Close the video-container div -->
+        
+        </div> <!-- Close the article div -->
+    </main>
+  
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-icons">
+                <a href="#" class="material-icons">home</a>
+                <a href="#" class="material-icons">subscriptions</a>
+                <a href="#" class="material-icons">video_library</a>
+                <a href="#" class="material-icons">history</a>
+                <a href="#" class="material-icons">slideshow</a>
+                <a href="#" class="material-icons">subscriptions</a>
+            </div>
+            <!-- Add more navigation items as needed -->
+        </div>
+    </nav>
+    
+
+    <!-- Content goes here -->
+
+</body>
+</html>
